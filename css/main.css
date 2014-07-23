@@ -29,6 +29,10 @@ h3, body {
     margin: 0 auto;
 }
 
+#form-holder {
+    padding-top: 5%;
+}
+
 .ng-invalid.ng-dirty {
   border-color: red;
 }

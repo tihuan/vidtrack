@@ -17,9 +17,8 @@
     <script src="js/modernizr-latest.js"></script>
   </head>
   <body ng-controller="UserController as userCtrl">
-    <div id="form-holder">
-      <form name="userForm" ng-hide="userCtrl.show"
-                                             ng-submit="userForm.$valid && userCtrl.sendUser()" novalidate>
+    <div id="form-holder" ng-hide="userCtrl.show">
+      <form name="userForm" ng-submit="userForm.$valid && userCtrl.sendUser()" novalidate>
         <!--  Live Preview -->
         <div class="pull-right">
           <h4>Preview User Information</h4>
