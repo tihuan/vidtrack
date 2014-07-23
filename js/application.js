@@ -9,7 +9,9 @@
       this.clickInfo.mouseX = event.layerX || event.offsetX;
       this.clickInfo.mouseY = event.layerY || event.offsetY;
       this.clickInfo.time = video.currentTime();
-      var json_text = angular.fromJson(this.clickInfo)
+      var json_text = angular.toJson(this.clickInfo)
+      console.log("Sending the following JSON string to server:");
+      console.log(json_text);
       $.ajax({
         url: "/gatherinfo",
         type: "POST",
