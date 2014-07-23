@@ -16,7 +16,9 @@
     <script src="js/modernizr-latest.js"></script>
   </head>
   <body ng-controller="ClickController as click">
-    <div id="video-holder">
+
+
+    <div id="video-holder" ng-show="click.show">
       <h2>VidTrack</h2>
       <video id="example_video_1" class="video-js vjs-default-skin"
         controls preload="auto" width="640" height="264"

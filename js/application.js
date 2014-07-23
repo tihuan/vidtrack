@@ -2,6 +2,7 @@
   var video =  videojs("example_video_1");
   var app = angular.module('track', []);
   app.controller('ClickController', function(){
+    this.show = false;
     this.sendCoords = function(event){
       this.clickInfo = {};
       // event.layer for Firefox and event.offset for other browsers
