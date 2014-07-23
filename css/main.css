@@ -6,8 +6,11 @@ textarea {
     color: #222;
 }
 
-body {
+h3, body {
     color: white;
+}
+
+body {
     font-size: 1em;
     line-height: 1.4;
 }
