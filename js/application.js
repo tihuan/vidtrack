@@ -14,10 +14,12 @@
         this.mouseX = event.offsetX;
         this.mouseY = event.offsetY;
       }
-      console.log(this.mouseX);
-      console.log("x: " + this.mouseX + ", " +
-                         "y: " + this.mouseY + ", " +
-                         "time: " + video.currentTime());
-    };
-  }) // ClickController
+
+      var clickInfo = "x: " + this.mouseX + ", " +
+                             "y: " + this.mouseY + ", " +
+                             "time: " + video.currentTime();
+
+      console.log(clickInfo);
+    }; // sendCoords
+  }); // ClickController
 }) ();
