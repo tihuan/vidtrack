@@ -6,8 +6,8 @@
     this.sendCoords = function(event){
 
       if ( event.offsetX == null ) {
-        this.clickInfo.mouseX = event.originalEvent.layerX;
-        this.clickInfo.mouseY = event.originalEvent.layerY;
+        this.clickInfo.mouseX = event.layerX;
+        this.clickInfo.mouseY = event.layerY;
         this.clickInfo.time = video.currentTime();
       } else {
         this.clickInfo.mouseX = event.offsetX;
