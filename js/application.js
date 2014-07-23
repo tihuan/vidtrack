@@ -9,7 +9,12 @@
       this.clickInfo.mouseX = event.layerX || event.offsetX;
       this.clickInfo.mouseY = event.layerY || event.offsetY;
       this.clickInfo.time = video.currentTime();
-      console.log(this.clickInfo);
+      var json_text = angular.fromJson(this.clickInfo)
+      $.ajax({
+        url: "/gatherinfo",
+        type: "POST",
+        data: json_text
+      });
     }; // sendCoords
   }); // ClickController
 }) ();
