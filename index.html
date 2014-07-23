@@ -12,12 +12,11 @@
 
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
-    <script src="modernizr-latest.js"></script>
     <link href="https://vjs.zencdn.net/4.6/video-js.css" rel="stylesheet">
+    <script src="modernizr-latest.js"></script>
   </head>
   <body ng-controller="ClickController as click">
     <h2>VidTrack</h2>
-    <div width="640" height="640" ng-click="click.sendCoords($event)"></div>
     <video id="example_video_1" class="video-js vjs-default-skin"
       controls preload="auto" width="640" height="264"
       poster="http://video-js.zencoder.com/oceans-clip.png"
@@ -29,9 +28,10 @@
     </video>
 
     <div>
-      <h3 ng-model="click.clickInfo.mouseX">X: {{click.clickInfo.mouseX}}</h2>
-      <h3 ng-model="click.clickInfo.mouseY">Y: {{click.clickInfo.mouseY}}</h3>
-      <h3 ng-model="click.clickInfo.time">Time: {{click.clickInfo.time}}</h3>
+      <h3>X: {{click.clickInfo.mouseX}}</h2>
+      <h3>Y: {{click.clickInfo.mouseY}}</h3>
+      <h3>Time: {{click.clickInfo.time}}</h3>
+      <h3>JSON: {{click.clickInfo.json}}</h3>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
