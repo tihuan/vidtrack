@@ -21,13 +21,14 @@
       <form name="userForm" ng-hide="userCtrl.show"
                                              ng-submit="userForm.$valid && userCtrl.sendUser()" novalidate>
         <!--  Live Preview -->
+        <div class="pull-right">
           <h4>Preview User Information</h4>
           <p>Click Skill: {{userCtrl.user.clickSkill}}</p>
           <p>Name: {{userCtrl.user.name}}</p>
           <p>Email: {{userCtrl.user.email}}</p>
-
-        <!--  Review Form -->
-        <h4>Please Fill Form Below</h4>
+        </div>
+        <!--  User Form -->
+        <h4>Please Fill Form Below Completely</h4>
         <fieldset class="form-group">
           <select ng-model="userCtrl.user.clickSkill" class="form-control" ng-options="skill for skill in [5,4,3,2,1]"  title="Click Skill" required>
             <option value="">Rate your click skill</option>
@@ -40,13 +41,14 @@
           <input ng-model="userCtrl.user.email" type="email" class="form-control" placeholder="JonDoe@example.org" title="Email" required/>
         </fieldset>
         <fieldset class="form-group">
-          <input type="submit" class="btn btn-primary pull-right" value="Submit Review" />
+          <input type="submit" class="btn btn-primary" value="Submit" />
         </fieldset>
         <div>userForm is {{userForm.$valid}}</div>
       </form>
     </div>
 
-    <div id="video-holder" ng-show="userCtrl.show" ng-controller="ClickController as clickCtrl">
+    <div id="video-holder" ng-show="userCtrl.show"
+                                         ng-controller="ClickController as clickCtrl">
       <h2>VidTrack</h2>
       <video id="example_video_1" class="video-js vjs-default-skin"
         controls preload="auto" width="640" height="264"
