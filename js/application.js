@@ -1,6 +1,7 @@
 (function() {
   var app = angular.module('track', []);
   app.controller('ClickController', function(){
+    var video =  videojs("example_video_1");
     this.coords = [];
     this.mouseX = 0;
     this.mouseY = 0;
@@ -14,8 +15,9 @@
         this.mouseY = event.offsetY;
       }
       console.log(this.mouseX);
-      console.log("x: " + this.mouseX + ", " + "y: " + this.mouseY);
+      console.log("x: " + this.mouseX + ", " +
+                         "y: " + this.mouseY + ", " +
+                         "time: " + video.currentTime());
     };
-  })
-
+  }) // ClickController
 }) ();
