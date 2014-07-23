@@ -28,6 +28,12 @@
      <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
     </video>
 
+    <div>
+      <h3 id="clickinfo-x" ng-model="click.clickInfo.mouseX">X: {{click.clickInfo.mouseX}}</h2>
+      <h3 id="clickinfo-y" ng-model="click.clickInfo.mouseY">Y: {{click.clickInfo.mouseY}}</h3>
+      <h3 id="clickinfo-time" ng-model="click.clickInfo.time">Time: {{click.clickInfo.time}}</h3>
+    </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-2.1.1.min.js"><\/script>')</script>

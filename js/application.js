@@ -2,24 +2,24 @@
   var app = angular.module('track', []);
   app.controller('ClickController', function(){
     var video =  videojs("example_video_1");
-    this.coords = [];
-    this.mouseX = 0;
-    this.mouseY = 0;
+    this.clickInfo = {};
     this.sendCoords = function(event){
 
       if ( event.offsetX == null ) {
-        this.mouseX = event.originalEvent.layerX;
-        this.mouseY = event.originalEvent.layerY;
+        this.clickInfo.mouseX = event.originalEvent.layerX;
+        this.clickInfo.mouseY = event.originalEvent.layerY;
+        this.clickInfo.time = video.currentTime();
       } else {
-        this.mouseX = event.offsetX;
-        this.mouseY = event.offsetY;
+        this.clickInfo.mouseX = event.offsetX;
+        this.clickInfo.mouseY = event.offsetY;
+        this.clickInfo.time = video.currentTime();
       }
 
-      var clickInfo = "x: " + this.mouseX + ", " +
-                             "y: " + this.mouseY + ", " +
-                             "time: " + video.currentTime();
+      var clickInfo = "x: " + this.clickInfo.mouseX + ", " +
+                             "y: " + this.clickInfo.mouseY + ", " +
+                             "time: " + this.clickInfo.time;
 
-      console.log(clickInfo);
+      console.log(this.clickInfo);
     }; // sendCoords
   }); // ClickController
 }) ();
